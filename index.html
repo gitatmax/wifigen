@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiFi QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>WiFi QR Code Generator</h1>
+        <div class="input-section">
+            <div id="wifiFields">
+                <div class="input-group">
+                    <input type="text" id="ssid" placeholder="Network Name (SSID)">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="showSsid"> Show SSID in print
+                    </label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="showPassword"> Show password in print
+                    </label>
+                </div>
+                
+                <select id="encryption">
+                    <option value="WPA">WPA/WPA2</option>
+                    <option value="WEP">WEP</option>
+                    <option value="nopass">No Password</option>
+                </select>
+                
+                <textarea id="additionalText" placeholder="Additional text to display (optional)"></textarea>
+            </div>
+            <button id="generate">Generate QR Code</button>
+        </div>
+        
+        <div class="qr-output">
+            <div id="qrcode"></div>
+            <button id="print" class="print-btn">Print QR Code</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
