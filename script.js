@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const generateBtn = document.getElementById('generate');
     const printBtn = document.getElementById('print');
     const qrcodeDiv = document.getElementById('qrcode');
+    const qrOutput = document.querySelector('.qr-output');
     let qrcode = null;
 
     generateBtn.addEventListener('click', () => {
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Clear previous QR code and details
         qrcodeDiv.innerHTML = '';
+        qrOutput.classList.add('visible');
         
         // Determine QR code colors based on color scheme
         const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;

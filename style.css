@@ -125,6 +125,11 @@ button:hover {
 
 .qr-output {
     text-align: center;
+    display: none;
+}
+
+.qr-output.visible {
+    display: block;
 }
 
 #qrcode {
