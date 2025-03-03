@@ -1,2 +1,0 @@
-# wifigen
- Another WiFi Generator
